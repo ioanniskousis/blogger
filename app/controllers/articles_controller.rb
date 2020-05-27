@@ -1,6 +1,5 @@
 class ArticlesController < ApplicationController
   include ArticlesHelper
-
   before_action :require_login, except: [:index, :show]
 
   def index
@@ -8,11 +7,12 @@ class ArticlesController < ApplicationController
       @month = params[:month]
       @articles = Article.select { |a| a.created_at.month == @month.to_i }
       @recs = @articles.count
-      @months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+      @months = %w[January February March April May June July August September October November December]
+
     else
       @articles = Article.all
       @recs = @articles.count
-      @months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+      @months = %w[January February March April May June July August September October November December]
     end
   end
 
@@ -20,6 +20,7 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
     @comment = Comment.new
     @comment.article_id = @article.id
+    @months = %w[January February March April May June July August September October November December]
   end
 
   def new
