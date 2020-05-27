@@ -776,3 +776,16 @@ div.field_with_errors input {
 hr.margined {
   margin-top: 40px;
 }
+
+div.out-container {
+  display: flex;
+
+}
+
+#container {
+  flex: 5;
+}
+
+div.sidebar {
+  flex: 1;
+}

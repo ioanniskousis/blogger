@@ -5,11 +5,14 @@ class ArticlesController < ApplicationController
 
   def index
     if params[:month]
-      puts params[:month] + "sdsdsd"
-      @articles = Article.all { |a| a.created_at.month == params[:month]}
+      @month = params[:month]
+      @articles = Article.select { |a| a.created_at.month == @month.to_i }
+      @recs = @articles.count
+      @months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
     else
-      puts Article.first
       @articles = Article.all
+      @recs = @articles.count
+      @months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
     end
   end
 
