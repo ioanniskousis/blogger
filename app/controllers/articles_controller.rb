@@ -1,18 +1,21 @@
 class ArticlesController < ApplicationController
   include ArticlesHelper
   before_action :require_login, except: [:index, :show]
+  attr_reader :months
+
+  def initialize
+    super
+    @months = %w[All January February March April May June July August September October November December]
+  end
 
   def index
     if params[:month]
       @month = params[:month]
       @articles = Article.select { |a| a.created_at.month == @month.to_i }
       @recs = @articles.count
-      @months = %w[January February March April May June July August September October November December]
-
     else
       @articles = Article.all
       @recs = @articles.count
-      @months = %w[January February March April May June July August September October November December]
     end
   end
 
@@ -20,7 +23,6 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
     @comment = Comment.new
     @comment.article_id = @article.id
-    @months = %w[January February March April May June July August September October November December]
   end
 
   def new

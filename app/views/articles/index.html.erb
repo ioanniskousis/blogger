@@ -1,11 +1,28 @@
 <h1>All Articles</h1>
-<ul id="articles">
-  <% @articles.each do |article| %>
-    <li>
-      <%= link_to article.title + " " + article.created_at.month.to_s, article_path(article), class: 'article_title', id: "article_#{article.id}" %>
-    </li>
-  <% end %>
-</ul>
+<div class="articles-container">
+
+  <div class="articles-list">
+    <ul id="articles">
+      <% @articles.each do |article| %>
+        <li>
+          <%= link_to article.title, article_path(article), class: 'article_title', id: "article_#{article.id}" %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+
+  <div class="sidebar">
+    <ul>
+      <% @months.each_with_index { |m, i| %>
+      <li>
+      <%= link_to m, i == 0 ? articles_path : articles_path(month:i) %>
+      <% } %>
+      </li>
+    </ul>
+  </div>
+
+</div>
+
 <% if logged_in? %>
   <%= link_to "Create a New Article", new_article_path, class: "new_article" %>
 <% end %>

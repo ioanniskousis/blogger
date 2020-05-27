@@ -16,29 +16,18 @@
     </p>
   <% end %>
 
-  <div class="out-container">
-    <div id="container">
-      <div id="content">
-        <%= yield %>
-        <hr class="margined">
-        <h6>
-          <% if logged_in? %>
-            <%= "Logged in as #{current_user.email}" %>
-            <%= link_to "LogOut", logout_path, class: "align_right" %>
-          <% else %>
-            <%= link_to "(LogIn)", login_path %>
-          <% end %>
-        </h6>
-      </div>
-    </div>
-    <div id="sidebar">
-      <ul>
-        <% @months.each_with_index { |m, i| %>
-        <li>
-        <%= link_to m, articles_path(month:i+1) %>
-        <% } %>
-        </li>
-      </ul>
+  <div id="container">
+    <div id="content">
+      <%= yield %>
+      <hr class="margined">
+      <h6>
+        <% if logged_in? %>
+          <%= "Logged in as #{current_user.email}" %>
+          <%= link_to "LogOut", logout_path, class: "align_right" %>
+        <% else %>
+          <%= link_to "(LogIn)", login_path %>
+        <% end %>
+      </h6>
     </div>
   </div>
  </body>
