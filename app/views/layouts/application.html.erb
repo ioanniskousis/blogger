@@ -10,19 +10,22 @@
   </head>
 
   <body>
-  <p class="flash">
-    <%= flash.notice %>
-  </p>
+  <% if flash.notice %>
+    <p class="flash">
+      <%= flash.notice %>
+    </p>
+  <% end %>
+
   <div id="container">
     <div id="content">
       <%= yield %>
-      <hr>
+      <hr class="margined">
       <h6>
         <% if logged_in? %>
           <%= "Logged in as #{current_user.email}" %>
-          <%= link_to "(logout)", logout_path %>
+          <%= link_to "LogOut", logout_path, class: "align_right" %>
         <% else %>
-          <%= link_to "(login)", login_path %>
+          <%= link_to "(LogIn)", login_path %>
         <% end %>
       </h6>
     </div>

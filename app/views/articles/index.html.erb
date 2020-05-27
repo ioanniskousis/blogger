@@ -10,3 +10,5 @@
 <% if logged_in? %>
   <%= link_to "Create a New Article", new_article_path, class: "new_article" %>
 <% end %>
+
+<%= link_to "May", articles_path(month:5), class: "new_article months" %>

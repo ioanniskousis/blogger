@@ -4,7 +4,13 @@ class ArticlesController < ApplicationController
   before_action :require_login, except: [:index, :show]
 
   def index
-    @articles = Article.all
+    if params[:month]
+      puts params[:month] + "sdsdsd"
+      @articles = Article.all { |a| a.created_at.month == params[:month]}
+    else
+      puts Article.first
+      @articles = Article.all
+    end
   end
 
   def show
