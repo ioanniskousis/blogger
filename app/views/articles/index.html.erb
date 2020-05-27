@@ -5,7 +5,7 @@
     <ul id="articles">
       <% @articles.each do |article| %>
         <li>
-          <%= link_to article.title, article_path(article), class: 'article_title', id: "article_#{article.id}" %>
+          <%= link_to article.title + (article.view_count.nil? ? '' : (article.view_count > 0 ?  " (" + article.view_count.to_s + ")" : '')), article_path(article), class: 'article_title', id: "article_#{article.id}" %>
         </li>
       <% end %>
     </ul>

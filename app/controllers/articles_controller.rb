@@ -21,6 +21,7 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
+    @article.visit
     @comment = Comment.new
     @comment.article_id = @article.id
   end
@@ -35,7 +36,7 @@ class ArticlesController < ApplicationController
 
     flash.notice = "Article '#{@article.title}' Was created!"
 
-    redirect_to article_path(@article)
+    redirect_to articles_path
   end
 
   def destroy

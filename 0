@@ -1,0 +1,2 @@
+      invoke  active_record
+      create    db/migrate/20200527154725_add_view_count_to_article.rb
