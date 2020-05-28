@@ -29,5 +29,6 @@
 <% if logged_in? %>
   <%= link_to "Create a New Article", new_article_path, class: "new_article" %>
   <%= link_to "RSS Feed", articles_path(:xml), class: "new_article rss" %>
+  <%= link_to "JSON", articles_path(:json), class: "new_article json" %>
 <% end %>
 

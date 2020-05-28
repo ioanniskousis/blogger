@@ -20,10 +20,11 @@ class ArticlesController < ApplicationController
       @articles = Article.all
       @recs = @articles.count
     end
+    
     respond_to do |format|
       format.html
       format.xml { render xml: @articles.as_json }
-      format.json { render :json => @articles }
+      format.json { render json: @articles }
     end
 
   end

@@ -19,13 +19,14 @@
   <div id="container">
     <div id="content">
       <%= yield %>
-      <hr class="margined">
-      <h6>
+       
+      <h6 class="login">
+        <%= link_to "Authors", authors_path, class: "alink" %>
         <% if logged_in? %>
-          <%= "Logged in as #{current_user.email}" %>
-          <%= link_to "LogOut", logout_path, class: "align_right" %>
+          <%= "Logged in as #{current_user.email} " %>
+          <%= link_to "LogOut", logout_path, class: "alink align_right" %>
         <% else %>
-          <%= link_to "(LogIn)", login_path %>
+          <%= link_to "LogIn", login_path, class: "alink" %>
         <% end %>
       </h6>
     </div>
