@@ -59,8 +59,7 @@ Blogger is an application which shows articles and users may write comments abou
 - [System dependencies](#system-dependencies)
 - [Configuration](#configuration)
 - [Database initialization](#database-initialization)
-- [Testing](#testing)
-- [Services](#services) <!-- (job queues, cache servers, search engines, etc.) -->
+- [Services](#services)
 - [Deployment instructions](#deployment-instructions)
 
 - [Development](#development)
@@ -74,59 +73,86 @@ Blogger is an application which shows articles and users may write comments abou
 
 ## About The Project  
 
- The project uses a SQLite database which holds the following tables:
-    - Articles 
-      - Fields : Title, Body, Creation Date, Update Date, View Counts, Image Info
-    - Comments
-      - Fields : Author, Body
-    - Tags
-      - Fields : Name
-    - Taggings
-      - Fields : Reference To Articles, Reference To Tags
-    - Authors
-      - Fields : Name, email, password
+ The project uses a SQLite database which holds the following tables:  
+    - Articles  
+      - Fields : Title, Body, Creation Date, Update Date, View Counts, Image Info  
+    - Comments  
+      - Fields : Author, Body  
+    - Tags  
+      - Fields : Name  
+    - Taggings  
+      - Fields : Reference To Articles, Reference To Tags  
+    - Authors  
+      - Fields : Name, email, password  
 
 Each Article is linked to a number of comments and a number of tags.  
 A user must perform a login in order to create an article, add comments or update an article.  
 
 <hr/>
 
+### System Requierments
+  - Ruby
+  - Rails
+  - Yarn
+  - ImageMagik
+
 ## Configuration
+  - first, clone the project 
+  Run 
+```
+ git clone https://github.com/ioanniskousis/blogger.git
+```
+  - Install the necessary dependancies 
+ Run 
+```
+ bundle install
+
+ yarn install
+```
+
+<hr/>
 
 ## Database initialization
 
  Run 
- ```
+```
  rails db:seed
 ```
 in order to add initial data to the database
 
+<hr/>
+
 ## Services
   The application offers API for RSS in XML and JSON format
+
+<hr/>
   
+<!-- ABOUT THE PROJECT -->
+## Application Instructions  
+  As long as you are not log in you can just navigate through articles.  
+  You need to register using the authors link at the top of the initial page to access all the application functionalities.  
+  By selecting an article from the list you can add comments, edit or delete it.  
+  By clicking on the 'Create Article' you can create a new article and add tags and image.  
+
 ### Initial Screen
   The initial screen shows a list of all articles.  
-  Users may apply filter to view popular articles and grouped by month.  
-  Clicking on the relevant buttons on the top, the user may show RSS feed and JSON formated output of all articles.  
+  Users may apply filters to view Popular Articles or grouped by month.  
+  Clicking on the relevant buttons on the top, the user may show RSS feed in XML and JSON formated output of all articles.  
 
 ### Article View
   Clicking an article title from the initial list shows the details of that article.  
   This view allows to delete or edit the article and also to add comments.  
 
-
-<!-- ABOUT THE PROJECT -->
-## Application Instructions  
+<hr/>
 
 
-
-## Development
+## Development / contribution
   * Clone the project
   ```
   https://github.com/ioanniskousis/blogger.git
   ``` 
+<hr/>
 
-## Testing
- 
 
 ### Built With
 
@@ -135,8 +161,14 @@ This project was built using these technologies.
   - Ruby version 2.6
   - Ruby On Rails version 6.0
 
-### System dependencies
+<hr/>
 
+### System dependencies
+  - gem paperclip
+  - gem sorcery
+  - ImageMagik
+
+<hr/>
 
 <!-- LIVE VERSION -->
 
@@ -144,6 +176,7 @@ This project was built using these technologies.
 
   You can see it working [![Run on Repl.it](https://repl.it/badge/github/ioanniskousis/blogger)](https://repl.it/@ioanniskousis/blogger)
 
+<hr/>
 <!-- CONTACT -->
 
 ## Contributors
@@ -164,6 +197,7 @@ This project was built using these technologies.
 - Linkedin: [Eric Mbouwe](https://www.linkedin.com/in/ericmbouwe/)
 - E-mail: ericmbouwe@gmail.com
 
+<hr/>
 <!-- ACKNOWLEDGEMENTS -->
 
 ## Acknowledgements
@@ -184,6 +218,7 @@ This project was built using these technologies.
 [issues-shield]: https://img.shields.io/github/issues/ioanniskousis/blogger.svg?style=flat-square
 [issues-url]: https://github.com/ioanniskousis/blogger/issues
 
+<hr/>
 <!-- LICENSE -->
 
 ## License
