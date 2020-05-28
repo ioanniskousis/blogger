@@ -1,4 +1,6 @@
-<h1>All Articles <%= @month.nil? ? (@popular.nil? ? '' : ' Most Popular') : 'of ' + @months[@month.to_i]  %> </h1>
+ <!-- <h1>All Articles <%= @month.nil? ? (@popular.nil? ? '' : ' Most Popular') : 'of ' + @months[@month.to_i]  %> </h1> -->
+<h1> <%= @popular.nil? ? 'All Articles' + (@month.nil? ? '' : ' of ' + @months[@month.to_i] ) : 'Most Popular Articles' %> </h1>
+
 <div class="articles-container">
 
   <div class="articles-list">

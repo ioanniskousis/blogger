@@ -339,7 +339,7 @@ p.flash {
   top: -51px;
   left: 0;
   padding: 0.4em 0.8em;
-  width: 70%;
+  width: 50%;
   text-align: center;
   border-top: 0;
 }
@@ -514,6 +514,14 @@ a.delete {
   right: 73px;
 }
 
+a.new_author {
+  right: 80px;
+}
+
+a.show {
+  right: 80px;
+}
+
 a.months {
   right: 180px;
 }
@@ -598,13 +606,17 @@ a.new_article:active,
   padding-bottom: 0.1em;
 }
 
+.actions {
+  margin-top: 10px;
+}
+
 #articles .actions {
   border-left: 1px dotted #ddd;
   padding-left: 8px;
   margin-left: 3px;
   line-height: 1em;
   position: relative;
-  top: 2px;
+  top: 12px;
 }
 
 #articles .actions a {
@@ -940,22 +952,32 @@ a.json {
 h6.login {
   display: block;
   position: absolute;
-  top: -40px;
+  top: -36px;
   right: 10px;
   text-align: right;
 }
 
 .alink {
   text-decoration: none;
+  margin: 0 10px;
+  
+  padding: 6px 20px;
+  border-radius: 15px;
 }
 
 .alink:hover {
   color: blue;
-  text-decoration: underline;
+  /* text-decoration: underline; */
+  background-color: transparent;
+  background-color: silver;
 }
 
 td,
 th {
   padding: 10px;
   border: 1px solid gray;
+}
+
+.gray {
+  color: gray;
 }
