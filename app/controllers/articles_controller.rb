@@ -14,11 +14,17 @@ class ArticlesController < ApplicationController
       @articles = Article.select { |a| a.created_at.month == @month.to_i }
       @recs = @articles.count
     elsif params[:popular]
+      @popular = params[:popular]
       @articles = Article.all.sort { |a, b| (b.view_count.nil? ? 0 : b.view_count) <=> (a.view_count.nil? ? 0 : a.view_count) }.take(3)
     else
       @articles = Article.all
       @recs = @articles.count
     end
+    respond_to do |format|
+      format.html
+      format.xml { render xml: @articles.as_json }
+    end
+
   end
 
   def show
@@ -62,5 +68,4 @@ class ArticlesController < ApplicationController
 
     redirect_to article_path(@article)
   end
-
 end

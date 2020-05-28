@@ -110,16 +110,16 @@ a img {
 
 .fancy-button-reset-base-class,
 input[type=submit] {
-  font-family:"Lucida Grande",Lucida,Arial,sans-serif;
+  font-family: "Lucida Grande",Lucida,Arial,sans-serif;
   background: url('/images/button_bg.png?1301401396') repeat-x bottom left;
   margin:0;
-  width:auto;
-  overflow:visible;
-  display:inline-block;
-  cursor:pointer;
-  text-decoration:none;
-  border-style:solid;
-  font-weight:bold
+  width: auto;
+  overflow: visible;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  border-style: solid;
+  font-weight: bold
 }
 
 .fancy-button-reset-base-class::-moz-focus-inner,
@@ -789,4 +789,8 @@ hr.margined {
   color: white;
   text-decoration: none;
   margin-top: 10px;
+}
+
+a.rss {
+  right: 180px;
 }

@@ -1,4 +1,4 @@
-<h1>All Articles</h1>
+<h1>All Articles <%= @month.nil? ? (@popular.nil? ? '' : ' Most Popular') : 'of ' + @months[@month.to_i]  %> </h1>
 <div class="articles-container">
 
   <div class="articles-list">
@@ -28,5 +28,6 @@
 
 <% if logged_in? %>
   <%= link_to "Create a New Article", new_article_path, class: "new_article" %>
+  <%= link_to "RSS Feed", articles_path(:xml), class: "new_article rss" %>
 <% end %>
 
