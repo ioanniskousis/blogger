@@ -25,7 +25,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/ioanniskousis/blogger">
-    <img src="images/microverse.png" alt="Microverse Logo" width="80" height="80">
+    <img src="app/assets/images/microverse.png" alt="Microverse Logo" width="80" height="80">
   </a>
   
   <h3 align="center">Blogger Application</h3>
@@ -58,7 +58,6 @@ Blogger is an application which shows articles and users may write comments abou
 
 - [System dependencies](#system-dependencies)
 - [Configuration](#configuration)
-- [Database creation](#database-creation)
 - [Database initialization](#database-initialization)
 - [Testing](#testing)
 - [Services](#services) <!-- (job queues, cache servers, search engines, etc.) -->
@@ -92,6 +91,19 @@ A user must perform a login in order to create an article, add comments or updat
 
 <hr/>
 
+## Configuration
+
+## Database initialization
+
+ Run 
+ ```
+ rails db:seed
+```
+in order to add initial data to the database
+
+## Services
+  The application offers API for RSS in XML and JSON format
+  
 ### Initial Screen
   The initial screen shows a list of all articles.  
   Users may apply filter to view popular articles and grouped by month.  
