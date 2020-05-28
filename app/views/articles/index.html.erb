@@ -13,6 +13,9 @@
 
   <div class="sidebar">
     <ul>
+      <li>
+        <%= link_to "Most popular", articles_path(popular:true) %>
+      </li>
       <% @months.each_with_index { |m, i| %>
       <li>
       <%= link_to m, i == 0 ? articles_path : articles_path(month:i) %>

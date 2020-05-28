@@ -13,6 +13,8 @@ class ArticlesController < ApplicationController
       @month = params[:month]
       @articles = Article.select { |a| a.created_at.month == @month.to_i }
       @recs = @articles.count
+    elsif params[:popular]
+      @articles = Article.all.sort { |a, b| (b.view_count.nil? ? 0 : b.view_count) <=> (a.view_count.nil? ? 0 : a.view_count) }.take(3)
     else
       @articles = Article.all
       @recs = @articles.count
