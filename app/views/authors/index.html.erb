@@ -27,8 +27,5 @@
   </tbody>
 </table>
 
-<br>
-<% if logged_in? || @authors.count.zero? %>
-  <%= link_to 'New Author', new_author_path, class: 'new_article new_author' %>
-<% end %>
+<%= link_to 'New Author', new_author_path, class: 'new_article new_author' %>
 <%= link_to 'Back', articles_path, class: 'new_article' %>
