@@ -941,6 +941,12 @@ hr.margined {
   top: 100px;
 }
 
+.month:hover {
+  text-decoration: underline;
+  color: #030e19;
+  font-weight: 800;
+}
+
 .sidebar ul li a {
   display: block;
   color: white;
