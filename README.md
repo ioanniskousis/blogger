@@ -174,7 +174,7 @@ This project was built using these technologies.
 
 ## Live version
 
-  You can see it working [![Run on Heroku](https://heroku-badge.herokuapp.com/?app=cryptic-basin-86174&style=flat&svg=1&root=notfound.html)](https://cryptic-basin-86174.herokuapp.com/)
+  You can see it working [![Run on Heroku]](https://cryptic-basin-86174.herokuapp.com/)
 
 <hr/>
 <!-- CONTACT -->
