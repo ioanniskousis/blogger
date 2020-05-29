@@ -1,6 +1,7 @@
 class AuthorSessionsController < ApplicationController
-  
+
   def new
+    
   end
 
   def create
