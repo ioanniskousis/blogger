@@ -36,7 +36,7 @@
     <a href="https://github.com/ioanniskousis/blogger"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://repl.it/@ioanniskousis/blogger">View Demo</a>
+    <a href="https://cryptic-basin-86174.herokuapp.com/">View Demo</a>
     <a href="https://github.com/ioanniskousis/blogger/issues">Report Bug</a>
     <a href="https://github.com/ioanniskousis/blogger/issues">Request Feature</a>
   </p>
@@ -174,7 +174,7 @@ This project was built using these technologies.
 
 ## Live version
 
-  You can see it working [![Run on Repl.it](https://repl.it/badge/github/ioanniskousis/blogger)](https://repl.it/@ioanniskousis/blogger)
+  You can see it working [![Run on Heroku](https://repl.it/badge/github/ioanniskousis/blogger)](https://cryptic-basin-86174.herokuapp.com/)
 
 <hr/>
 <!-- CONTACT -->
