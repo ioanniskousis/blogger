@@ -936,6 +936,11 @@ hr.margined {
   border-radius: 6px;
 }
 
+.sticky {
+  position: sticky;
+  top: 100px;
+}
+
 .sidebar ul li a {
   display: block;
   color: white;
