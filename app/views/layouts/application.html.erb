@@ -26,7 +26,9 @@
           <span class='gray'> <%= "Logged in as #{current_user.email}" %> </span>
           <%= link_to "LogOut", logout_path, class: "alink" %>
         <% else %>
-          <%= link_to "LogIn", login_path, class: "alink" %>
+          <% if @authors.count.positive? %>
+            <%= link_to "LogIn", login_path, class: "alink" %>
+          <% end %>
         <% end %>
       </h6>
     </div>

@@ -339,7 +339,7 @@ p.flash {
   top: -51px;
   left: 0;
   padding: 0.4em 0.8em;
-  width: 50%;
+  width: 100%;
   text-align: center;
   border-top: 0;
 }
@@ -376,6 +376,7 @@ h1 {
     color-stop(0%, #42678d),
     color-stop(100%, #223447)
   );
+
   background-image: -moz-linear-gradient(#42678d, #223447);
   background-image: linear-gradient(#42678d, #223447);
   -moz-box-shadow: rgba(255, 255, 255, 0.15) 0 1px inset, white 0 1px;
@@ -384,7 +385,8 @@ h1 {
   box-shadow: rgba(255, 255, 255, 0.15) 0 1px inset, white 0 1px;
   margin: -20px -20px 15px;
   padding: 20px;
-  padding-right: 180px;
+  padding-top: 40px;
+  padding-right: 40%;
   line-height: 1em;
   font-weight: normal;
   color: #fff;
@@ -392,7 +394,7 @@ h1 {
   text-shadow: #192836 0 -2px;
   font-size: 2.5em;
 }
-
+ 
 h1:after {
   content: " ";
   position: absolute;
@@ -477,7 +479,7 @@ a.new_article,
 .article_actions a[href$="edit"],
 .article_actions a[data-method="delete"] {
   position: absolute;
-  top: 26px;
+  top: 50px;
   right: 20px;
   display: inline-block;
   font-size: 0.9em;
@@ -941,6 +943,7 @@ hr.margined {
   margin-top: 10px;
 }
 
+
 a.rss {
   right: 180px;
 }
@@ -952,9 +955,12 @@ a.json {
 h6.login {
   display: block;
   position: absolute;
-  top: -36px;
-  right: 10px;
+  top: 0px;
+  right: 0px;
   text-align: right;
+  padding: 8px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 0 6px 0 6px;
 }
 
 .alink {
